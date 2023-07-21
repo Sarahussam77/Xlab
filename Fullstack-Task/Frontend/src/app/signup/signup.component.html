@@ -1,0 +1,60 @@
+
+
+		<div class="wrapper">
+
+			<div class="inner">
+
+				<div class="image-holder">
+					<img src="assets/images/registration-form-4.jpg" alt="">
+				</div>
+
+        <br />
+				<form   (ngSubmit)="
+        signUp(
+          name.value,
+          mobile.value,
+          email.value,
+          password.value,
+          confirmPassword.value
+        )"
+      [formGroup]="validationForm">
+      <div class="text-danger" *ngIf="!Validation">
+        {{ authMsg }}
+      </div>
+
+					<div class="form-holder active">
+						<input #name type="text" placeholder="name" class="form-control">
+					</div>
+          <div class="form-holder ">
+						<input #mobile type="text" placeholder="mobile" class="form-control">
+					</div>
+					<div class="form-holder">
+						<input #email type="text" placeholder="e-mail" class="form-control">
+					</div>
+          <!-- <div class="form-holder">
+						<input #image type="file" placeholder="image" accept="image/*" style="padding-top:15px;" class="form-control">
+					</div> -->
+					<div class="form-holder">
+						<input #password type="password" placeholder="Password" class="form-control" style="font-size: 15px;">
+					</div>
+          <div class="form-holder ">
+						<input #confirmPassword type="password" placeholder="confirm password" class="form-control">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" checked> I agree all statement in <a href="#">Terms & Conditions</a>
+							<span class="checkmark"></span>
+						</label>
+					</div>
+
+
+        <div class="form-login">
+          <button type="submit">Sign up</button>
+          <p>Already Have account? <a href="#">Login</a></p>
+        </div></form>
+			</div>
+
+		</div>
+
+
+

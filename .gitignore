@@ -1,0 +1,73 @@
+# Node.js related files
+Fullstack-Task/Backend/node_modules/
+Fullstack-Task/Backend/npm-debug.log
+Fullstack-Task/Backend/yarn.lock
+Fullstack-Task/Backend/package-lock.json
+package-lock.json
+.env
+
+Fullstack-Task/Backend/uploads
+
+
+# MongoDB related files
+Fullstack-Task/Backend/*.log
+Fullstack-Task/Backend/*.journal
+Fullstack-Task/Backend/mongod.lock
+Fullstack-Task/Backend/db/
+Fullstack-Task/Backend/mongodump/
+Fullstack-Task/Backend/mongorestore/
+Fullstack-Task/Backend/mongoexport
+Fullstack-Task/Backend/mongoimport
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+Fullstack-Task/Frontend/dist
+Fullstack-Task/Frontend/tmp
+Fullstack-Task/Frontend/out-tsc
+Fullstack-Task/Frontend/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+Fullstack-Task/Frontend/.vscode/*
+Fullstack-Task/Frontend/!.vscode/settings.json
+Fullstack-Task/Frontend/!.vscode/tasks.json
+Fullstack-Task/Frontend/!.vscode/launch.json
+Fullstack-Task/Frontend/!.vscode/extensions.json
+Fullstack-Task/Frontend/.history/*
+
+# Miscellaneous
+Fullstack-Task/Frontend/.angular/cache
+.sass-cache/
+Fullstack-Task/Frontend/connect.lock
+Fullstack-Task/Frontend/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+####################
+

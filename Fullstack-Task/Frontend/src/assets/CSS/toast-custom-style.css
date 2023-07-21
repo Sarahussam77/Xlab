@@ -1,0 +1,19 @@
+/* Center the toast text */
+.toast-custom-style .toast-message {
+  text-align: center;
+}
+
+/* Custom background color */
+.toast-custom-style .toast-container .toast-success {
+  background-color: #4caf50; /* Green color for success toasts */
+}
+
+.toast-custom-style .toast-container .toast-error {
+  background-color: #f44336; /* Red color for error toasts */
+}
+
+/* Custom font size and color for the toast text */
+.toast-custom-style .toast-container .toast-message {
+  font-size: 16px;
+  color: #ffffff;
+}
