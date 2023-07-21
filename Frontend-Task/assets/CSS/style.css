@@ -1,0 +1,382 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eacbcb;
+  }
+  /* ENLACES */
+  a {
+    color: black;
+    cursor: pointer;
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-family: cursive;
+    transition: background-color .16s ease-in;
+  }
+  
+  a:hover {
+    
+    transform: scale(1.1);
+  }
+ 
+  
+  /* **************************************************
+          BARRA DE NAVEGACION Y MENU NORMAL
+  ****************************************************/
+  /* Barra de navegacion (contiene al nav mini menu) */
+  .navbar-menu {
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 1px 0px 10px 0px rgba(99, 97, 97,0.2) !important;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    z-index: 2;
+  }
+  
+  /* Menu */
+  .navbar-menu .menu {
+    display: block;
+    text-align:center;
+    margin-top: 10px;
+
+  }
+  
+  /* List items*/
+  .navbar-menu .menu li {
+    display: inline-block;
+  }
+  
+  /* Cuando se haga hover sobre el item el submenu se activa
+   en caso tuviese */
+  .navbar-menu .menu li:hover > .submenu {
+    display: block;
+   
+  }
+  
+  /* Submenus*/
+  .navbar-menu .menu li ul {
+    background-color: #f08080;
+    display: none;
+    position: absolute;
+  }
+  
+  /* List items de submenus */
+  .navbar-menu .menu li ul li {
+    display: block;
+  }
+  
+
+  
+  /******************************************************
+                          MINI MENU
+  ******************************************************/
+  /* Mini menu */
+  .navbar-mini-menu {
+    background-color: black;
+    display: none;
+  }
+  
+  /* Bloque que tiene el boton para desplegar el mini menu */
+  .navbar-mini-menu .menu-select {
+    color: white;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Span que contiene el icono*/
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  
+  /* Lista del mini menu */
+  .navbar-mini-menu .mini-menu-options {
+    display: block;
+  }
+  
+  /* Items del mini menu */
+  .navbar-mini-menu .mini-menu-options li {
+    display: block;
+  }
+  
+  /* Submenus de los items del mini menu */
+  .navbar-mini-menu .mini-menu-options li .submenu {
+    display: none;
+  }
+  
+  .navbar-mini-menu .mini-menu-options li:focus {
+    outline: 0;
+  }
+  
+  .navbar-mini-menu .mini-menu-options li:focus > .submenu {
+    display: block;
+
+  }
+  
+  /* Enlaces del mini menu */
+  .navbar-mini-menu .mini-menu-options li a {
+    display: block;
+    padding: 1rem 1.5rem;
+  }
+  
+ 
+  /*****************************************************                       MEDIAQUERIES
+  *****************************************************/
+  
+  /* slider */
+  
+
+
+  
+  /* Slider container styles */
+.slider-container {
+    max-width: 100%;
+    overflow: hidden;
+    
+  }
+  
+  /* Slider styles */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slider img {
+    width: 100%  !important;
+    height: 100vh;
+  }
+
+
+/* Background Container Styles */
+.background-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  
+}
+
+.background-image {
+  flex: 1;
+  background-image: url('../Image/istockphoto-1170101361-170667a.jpg'); /* Replace with your background image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image p {
+  width: 400px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+  font-family: cursive;
+  padding: 20px;
+  height: 30vh;
+}
+
+/* Container for paragraph and radio div */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30%;
+}
+/* Slider buttons styles */
+.slider-buttons {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1; /* Ensure buttons are above the slider */
+}
+
+.slider-buttons button {
+  margin: 5%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0,0.2);
+  color: black;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+
+
+/* Radio div styles */
+.radio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Custom style for the active radio */
+.radio input[type="radio"].active {
+  /* Add your styles for the active radio here */
+  color: blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+/* Service Container Styles */
+.service-container {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+/* Individual Service Styles */
+.service {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.services h1{
+  font-family: cursive;
+    padding: 10px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 20%;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.service a {
+  display: inline-block;
+  background-color: #f08080;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.service a:hover {
+  background-color: #ff6666;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+  }
+}
+/* product section */
+
+
+.div {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;}
+@media screen and (max-width: 750px) {
+  /* Elimina los margenes al nav */
+  .navbar-menu {
+    margin: 0;
+  }
+  
+  /* Esconde el menu normal */
+  .navbar-menu .menu {
+    display: none;
+  }
+  
+  /* Muestra el mini menu */
+  .navbar-mini-menu {
+    display: block;
+  }
+  
+  /* Esconde la lista del mini menu */
+  .navbar-mini-menu .mini-menu-options {
+    display: none;
+  }
+  
+  
+  .slider-buttons button {
+    
+    width: 40px !important;
+    height: 40px !important;
+    
+  }
+  .slider-container{
+    margin-top: 10% !important;
+  }
+  .slider img {
+    
+    height: 50vh !important;
+  }
+  a{
+    color:white !important;
+  }
+  .background-image p {
+    width: 200px;
+    text-align: center;
+    font-size:3.5vh !important;
+    
+  }
+  .content-container {
+    
+    margin-right: 7% !important;
+  }
+}
