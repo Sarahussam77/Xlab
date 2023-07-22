@@ -11,22 +11,24 @@ dotenv.config();
 var SignUp = async (req, res) => {
   const { name, mobile,email, password} = req.body;
   try {
-     let foundedUser = await usersmodel.findOne({email:req.body.email}).exec();
+     let foundedUser = await usersmodel.findOne({email});
         if(foundedUser) {
              return res.status(400).json({message:"User Already Exist"});
         }
-    let user=usersmodel.create({
+   
+    const { error, value } = checkUser.validate(req.body);
+
+    if (error) {
+      return res.status(400).json({ error: error.details[0].message });
+    }else{
+      console.log('a')
+     await usersmodel.create({
         name,
         mobile,
         email,
         password,
     });
-    const { error, value } = userSchema.validate(user);
-
-    if (error) {
-      return res.status(400).json({ error: error.details[0].message });
-    }else{
-    await user.save();
+    console.log('aa');
     return res.json({ message: 'User created successfully', data: value });}
    
    
