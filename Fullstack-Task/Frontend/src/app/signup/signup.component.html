@@ -18,10 +18,12 @@
           confirmPassword.value
         )"
       [formGroup]="validationForm">
-      <div class="text-danger" *ngIf="!Validation">
+      <div class="text-success pb-4 mx-4" *ngIf="authMsg">
         {{ authMsg }}
       </div>
-
+      <div class="text-danger pb-4 mx-4" *ngIf="!Validation">
+        {{ errorMsg }}
+      </div>
 					<div class="form-holder active">
 						<input #name type="text" placeholder="name" class="form-control">
 					</div>

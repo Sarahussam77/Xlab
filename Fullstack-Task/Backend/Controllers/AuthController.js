@@ -55,7 +55,7 @@ var SignUp = async (req, res) => {
 
       const { error, value } = checkUser.validate(req.body);
       if (error) {
-        return res.status(400).json({ error: error.details[0].message });
+        return res.status(400).json({ message: error.details[0].message });
       } else {
         await usersmodel.create({
           name,
@@ -64,7 +64,7 @@ var SignUp = async (req, res) => {
           password,
           image,
         });
-        return res.json({ message: 'User created successfully', name: value.name });
+        return res.json({ message: 'Your account created successfully', name: value.name });
       }
     });
   } catch (e) {
