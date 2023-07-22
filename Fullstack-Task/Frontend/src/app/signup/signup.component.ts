@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SignupService } from './service/signup.service';
 
@@ -10,7 +10,10 @@ import { SignupService } from './service/signup.service';
 })
 export class SignupComponent {
 authMsg:any
-  constructor(private signUpServ:SignupService){  }
+
+  constructor(private signUpServ:SignupService,private el: ElementRef){
+
+    }
 //#region validation
 validationForm = new FormGroup({
   name:new FormControl(null,[Validators.minLength(4),Validators.maxLength(25),Validators.required]),
@@ -30,8 +33,18 @@ get Validation(){
       this.authMsg="Please confirm your password"
       return
     }
-    let signupUser = { name, mobile, email, password};
-    this.signUpServ.signup(signupUser).subscribe(
+      let inputEl: any = this.el.nativeElement.querySelector('#image');
+        let formData = new FormData();
+    formData.append('name', name);
+    formData.append('mobile', mobile);
+    formData.append('email', email);
+    formData.append('password', password);
+
+    // Append the image file to the form data
+    if (inputEl.files.length > 0) {
+      formData.append('image', inputEl.files[0]);
+    }
+    this.signUpServ.signup(formData).subscribe(
       (data:any)=>{
         this.authMsg=data;
         console.log(this.authMsg)

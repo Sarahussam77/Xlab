@@ -46,14 +46,9 @@ let UsersSchema = new mongoose.Schema({
             message: (props) => `${props.value} is not a valid phone number!`,
         },
     },
-    // image:{
-    //     type:string,
-    //     validate:{
-    //         validator:(val)=>{
-    //           validator.isImage(val)
-    //         }
-    //     }
-    // }
+    image:{
+        type:String,
+    }
 
 });
 

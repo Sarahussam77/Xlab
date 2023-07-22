@@ -5,5 +5,6 @@ const userSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().min(6).required(),
   mobile: Joi.string().pattern(/^01[0125][0-9]{8}$/).required(),
+  image: Joi.string().regex(/\.(jpg|jpeg|png)$/) 
 });
 module.exports = userSchema;

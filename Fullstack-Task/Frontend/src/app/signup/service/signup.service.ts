@@ -15,7 +15,7 @@ export class SignupService {
   ) {
     this.Base_URL = this.configService.getBaseUrl('auth/signup');
   }
-  signup(signupUser: any) {
+  signup(signupUser: FormData) {
     return this.http.post(this.Base_URL, signupUser);
   }
 }
