@@ -8,6 +8,7 @@ import { ConfigService } from 'src/app/config.service';
 export class SignupService {
 
   private readonly Base_URL: string;
+  // service to send the formdata to node server
 
   constructor(
     private readonly http: HttpClient,

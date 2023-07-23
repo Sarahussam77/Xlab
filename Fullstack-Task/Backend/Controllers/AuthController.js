@@ -35,6 +35,7 @@ const upload = multer({
 //#region SignUp
 var SignUp = async (req, res) => {
   try {
+    // upload the image 
     upload(req, res, async (err) => {
       if (err) {
         return res.status(400).json({ error: err.message });
@@ -47,16 +48,17 @@ var SignUp = async (req, res) => {
         image = req.file.path;
       }
 
-      // Validate the incoming product data against the schema
+  // check if the user already exists
       let foundedUser = await usersmodel.findOne({ email });
       if (foundedUser) {
         return res.status(400).json({ message: "User Already Exist" });
       }
-
+    // Validate the incoming product data against the schema
       const { error, value } = checkUser.validate(req.body);
       if (error) {
         return res.status(400).json({ message: error.details[0].message });
       } else {
+        // add user to database when it is valid
         await usersmodel.create({
           name,
           mobile,

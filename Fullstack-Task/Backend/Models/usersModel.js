@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 var validator = require("validator");
-
+// call database to connect
 const connectToDatabase = require("../Utils/databaseConfig");
-
+// user schema
 let UsersSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -51,7 +51,7 @@ let UsersSchema = new mongoose.Schema({
     }
 
 });
-
+// function to hash password after add to database
 UsersSchema.pre('save', function (next) {
     if (this.isNew || this.isModified('password')) {
         bcrypt.hash(this.password, 10)

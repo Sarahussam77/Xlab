@@ -1,5 +1,5 @@
 const Joi = require('joi');
-
+// validation to user data
 const userSchema = Joi.object({
   name: Joi.string().max(30).required(),
   email: Joi.string().email().required(),

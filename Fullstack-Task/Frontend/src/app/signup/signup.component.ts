@@ -29,10 +29,12 @@ get Validation(){
 }
 //#endregion
   signUp(name:string, mobile:string, email:string, password:string,confirmPassword:string){
+    // check the confirmation of 2 passwords
     if(password!=confirmPassword){
       this.errorMsg="Please confirm your password"
       return
     }
+    // get image and append the data to formdata
       let inputEl: any = this.el.nativeElement.querySelector('#image');
         let formData = new FormData();
     formData.append('name', name);
@@ -44,6 +46,7 @@ get Validation(){
     if (inputEl.files.length > 0) {
       formData.append('image', inputEl.files[0]);
     }
+    // send the data to the services
     this.signUpServ.signup(formData).subscribe(
       (data:any)=>{
         this.errorMsg=""
@@ -52,6 +55,7 @@ get Validation(){
 
       },
       (err)=>{
+        // get the error message from server
         if(err.error.message.includes("mobile")){
         this.errorMsg= "mobile is required and must be valid";
         this.authMsg="";
@@ -59,7 +63,9 @@ get Validation(){
           this.errorMsg="name is required and must be less than 30"
         }else if(err.error.message.includes("name")){
           this.errorMsg="email is required and must be vaild"
-        }console.log(err)
+        }else if(err.error.message.includes("image")){
+          this.errorMsg="enter a vaild image"
+        }
 
       }
 
