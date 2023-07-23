@@ -4,9 +4,9 @@ To install and run User Meal Planner locally, follow these steps:
 
 1. Clone the repository:
 <pre>
--git clone https://github.com/Sarahussam77/Xlab
+- git clone https://github.com/Sarahussam77/Xlab
 - cd Xlab 
--cd fullstack-task
+- cd fullstack-task
 </pre>
 - **BACK-END INSTALLATION**
   <pre>
@@ -40,10 +40,13 @@ The following technologies were used in the development :
     
 |  METHODS      |         URI              | ACTIONS | 
 | :---:         |         :---:            | :---: |   
-| POST          | `/api/auth/signup`          | `Register` | 
-
-
- 
+| POST          | `/api/auth/signup`          | `Register` |  
 </div> 
 
+# Xlab frontend task
+<pre>
 
+- cd frontend-task
+- cd with-bootstrap (for homepage using bootstrap)
+- cd without-bootstrap (for homepage using pure html css)
+</pre>
