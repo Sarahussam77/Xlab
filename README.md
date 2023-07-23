@@ -1,6 +1,6 @@
 # Xlab fullstack task
 
-To install and run User Meal Planner locally, follow these steps:
+To install and run Xlab task locally, follow these steps:
 
 1. Clone the repository:
 <pre>
