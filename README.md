@@ -43,6 +43,13 @@ The following technologies were used in the development :
 | POST          | `/api/auth/signup`          | `Register` |  
 </div> 
 
+## DEMO
+🎬
+You can see the demo here:
+<a href="https://drive.google.com/file/d/13vPDJq3gpN2y0JKBw8fBfK1n_LmBlmfZ/view?usp=sharing">
+  <img src="Fullstack-Task/Frontend/src/assets/images/Readme.png" alt="Website Demo Video" width="600"/>
+</a>
+
 # Xlab frontend task
 <pre>
 
