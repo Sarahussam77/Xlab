@@ -37,6 +37,7 @@ body {
     color: white !important;
     
   }
+  /*  */
   .background-image {
     flex: 1;
     background-image: url('../Image/istockphoto-1170101361-170667a.jpg'); /* Replace with your background image URL */
@@ -57,23 +58,63 @@ body {
     font-family: cursive;
   margin-left: 10% !important;
   }
+  /*  */
   .carousel-image img{
     height: 100vh;
   }
-  .services{
-    height: 90vh;
-  }
+  /*  */
+ 
   .services h1{
     font-family: cursive;
-      padding: 10px;
+      padding:20px 0px 0px 20px;
       justify-self: center;
       display: flex;
       flex-direction: column;
       align-items: center;
   }
-  .container .row div img{
+   /* Apply basic styles to the image container */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the image inside the container */
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease; /* Add a transition effect to the filter property */
+}
+
+/* Style the text overlay */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.3s ease; /* Add a transition effect to the opacity property */
+}
+
+/* When hovering over the image container, apply the blur and show the text */
+.image-container:hover img {
+  filter: blur(4px); /* Apply the blur effect on hover */
+  cursor: pointer;
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1; /* Show the text on hover */
+}
+
+  /*  */
+  .container .row .imgs img{
     width: 100%;
-    height: 300px;
+    height: auto;
+    border-radius: 50%;
   }
   .card{
     background-color: transparent;
@@ -106,6 +147,7 @@ body {
     font-size: large;
     font-weight: bold;
   }
+  /*  */
   .contact-form label {
     display: block;
     font-weight: bold;
