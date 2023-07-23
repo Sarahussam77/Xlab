@@ -61,12 +61,15 @@ get Validation(){
         this.authMsg="";
         }else if(err.error.message.includes("name")){
           this.errorMsg="name is required and must be less than 30"
-        }else if(err.error.message.includes("name")){
+        }else if(err.error.message=='User Already Exist'){
+          this.errorMsg=err.error.message;
+        }
+        else if(err.error.message.includes("email")){
           this.errorMsg="email is required and must be vaild"
         }else if(err.error.message.includes("image")){
           this.errorMsg="enter a vaild image"
         }
-
+console.log(err)
       }
 
     )
